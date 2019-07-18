@@ -444,7 +444,7 @@ const userpannel = new Vue({
             else{
                 seedUnit =seedUnit.toLowerCase()
             }
-            var url ="http://192.168.1.42:3033/api/treeMap?treeNumRate="+seedNum+"&searchAngle="+angle+"&seedStrength="+seedStrength+"&treeWidth="+treeWidth+"&spaceInterval="+spaceInterval+"&seedUnit="+seedUnit+"&jumpLen="+jumpLen+"&gridDirNum="+gridDirNum+"&timeSegID="+timeSegId+"&delta="+delta+"&maxDistance="+maxDistance+"&gridSize="+gridSize+"&city="+city;
+            var url ="http://192.168.0.118:3033/api/treeMap?treeNumRate="+seedNum+"&searchAngle="+angle+"&seedStrength="+seedStrength+"&treeWidth="+treeWidth+"&spaceInterval="+spaceInterval+"&seedUnit="+seedUnit+"&jumpLen="+jumpLen+"&gridDirNum="+gridDirNum+"&timeSegID="+timeSegId+"&delta="+delta+"&maxDistance="+maxDistance+"&gridSize="+gridSize+"&city="+city;
             console.log(url) ;
             map[0].allLatLngNodes = [];
             map[0].lastLen = 0;
@@ -600,7 +600,7 @@ const userpannel = new Vue({
                             maps.anomalyType = "none";
                             return;
                         }*/
-                        var url = "http://192.168.1.42:3033/api/abnormalStats?hourID="+hourID+"&timeSegID="+timeSegID+"&type="+type+"&city="+maps.city;
+                        var url = "http://192.168.0.118:3033/api/abnormalStats?hourID="+hourID+"&timeSegID="+timeSegID+"&type="+type+"&city="+maps.city;
                         console.log(url)
                         $.ajax({
                             url:url,
@@ -665,10 +665,10 @@ const userpannel = new Vue({
             console.log("changetime function")
         },
         'getOverview': function (begintime, endtime) {
-            var get_url = "http://192.168.1.42:3033/api/basicGraph?spaceType=grid&timeType=duration&netType=basic&other=none&beginTime=" + begintime + "&endTime=" + endtime;
+            var get_url = "http://192.168.0.118:3033/api/basicGraph?spaceType=grid&timeType=duration&netType=basic&other=none&beginTime=" + begintime + "&endTime=" + endtime;
             console.log(get_url);
             $.ajax({
-                /* url:'http://192.168.1.42:3033/api/basicGraph?spaceType=grid&timeType=duration&netType=basic&other=none&beginTime=2016-07-05+03%3A30%3A00&endTime=2016-07-05+06%3A05%3A00',*/
+                /* url:'http://192.168.0.118:3033/api/basicGraph?spaceType=grid&timeType=duration&netType=basic&other=none&beginTime=2016-07-05+03%3A30%3A00&endTime=2016-07-05+06%3A05%3A00',*/
                 url: get_url,
                 type: 'GET',
                 contentType: "application/json",
@@ -708,7 +708,7 @@ const userpannel = new Vue({
         'changeSort':function(index,sortOption){
             sortOpt = sortOption ;
             var particleNum = maps.mapObj[index].particleNum;
-            var url = "http://192.168.1.42:3033/api/tripFlow?type=record&thread="+particleNum+"&time=2016-07-05%2009:00:00&order="+sortOpt+"&v=v1";
+            var url = "http://192.168.0.118:3033/api/tripFlow?type=record&thread="+particleNum+"&time=2016-07-05%2009:00:00&order="+sortOpt+"&v=v1";
             $.ajax({
                 url:url ,
                 type: 'GET',
@@ -728,7 +728,7 @@ const userpannel = new Vue({
             var maxParticleLength = maps.mapObj[index].maxParticleLength;
             var directionNum = maps.mapObj[index].directionNum;
             console.log(particleNum)
-            var url = "http://192.168.1.42:3033/api/tripFlow?type=record&thread=10000&time=2016-07-05%2009:00:00&order="+sortOpt+"&v=v1";
+            var url = "http://192.168.0.118:3033/api/tripFlow?type=record&thread=10000&time=2016-07-05%2009:00:00&order="+sortOpt+"&v=v1";
             $.ajax({
                 url:url ,
                 type: 'GET',
@@ -797,7 +797,7 @@ const userpannel = new Vue({
                 var begintime = starttime.split('-')[0] + "-" + start_month + "-" + starttime.split('-')[2] + "+" + start_hour;
                 //var end_month = months[end_time.split('-')[1]];
                 var endtime = starttime.split('-')[0] + "-" + start_month + "-" + starttime.split('-')[2] + "+" + end_hour;
-                var get_url = "http://192.168.1.42:3033/api/basicGraph?spaceType=grid&timeType=duration&netType=basic&other=none&beginTime=" + begintime + "&endTime=" + endtime;
+                var get_url = "http://192.168.0.118:3033/api/basicGraph?spaceType=grid&timeType=duration&netType=basic&other=none&beginTime=" + begintime + "&endTime=" + endtime;
                 $.ajax({
                     url: get_url,
                     type: 'GET',
@@ -989,7 +989,7 @@ const userpannel = new Vue({
                      var begintime = starttime.split('-')[0]+"-"+start_month+"-"+starttime.split('-')[2]+"+"+start_hour;
                      //var end_month = months[end_time.split('-')[1]];
                      var endtime = starttime.split('-')[0]+"-"+start_month+"-"+starttime.split('-')[2]+"+"+end_hour;
-                     var get_url = "http://192.168.1.42:3033/api/basicGraph?spaceType=div&timeType=duration&netType=basic&other=none&beginTime="+begintime+"&endTime="+endtime;
+                     var get_url = "http://192.168.0.118:3033/api/basicGraph?spaceType=div&timeType=duration&netType=basic&other=none&beginTime="+begintime+"&endTime="+endtime;
                      console.log(get_url);*/
 
                     if (d3.select(this).style("opacity") == 0) {
@@ -1037,17 +1037,17 @@ const userpannel = new Vue({
                             var begintime = starttime.split('-')[0] + "-" + start_month + "-" + starttime.split('-')[2] + "+" + start_hour;
                             //var end_month = months[end_time.split('-')[1]];
                             var endtime = end_time.split('-')[0] + "-" + start_month + "-" + end_time.split('-')[2] + "+" + end_hour;
-                            var get_url = "http://192.168.1.42:3033/api/basicGraph?spaceType=div&timeType=duration&netType=basic&other=none&beginTime=" + begintime + "&endTime=" + endtime+"&v=v2";
-                            var poi_to_div_url = "http://192.168.1.42:3033/api/basicGraph?spaceType=poi_to_div&timeType=duration&netType=basic&other=none&beginTime=" + begintime + "&endTime=" + endtime +"&v=v2";
+                            var get_url = "http://192.168.0.118:3033/api/basicGraph?spaceType=div&timeType=duration&netType=basic&other=none&beginTime=" + begintime + "&endTime=" + endtime+"&v=v2";
+                            var poi_to_div_url = "http://192.168.0.118:3033/api/basicGraph?spaceType=poi_to_div&timeType=duration&netType=basic&other=none&beginTime=" + begintime + "&endTime=" + endtime +"&v=v2";
                             console.log(poi_to_div_url)
-                            var div_to_poi_url = "http://192.168.1.42:3033/api/basicGraph?spaceType=div_to_poi&timeType=duration&netType=basic&other=none&beginTime=" + begintime + "&endTime=" + endtime +"&v=v2";
+                            var div_to_poi_url = "http://192.168.0.118:3033/api/basicGraph?spaceType=div_to_poi&timeType=duration&netType=basic&other=none&beginTime=" + begintime + "&endTime=" + endtime +"&v=v2";
                             console.log(get_url);
                             if (currentIndex == 0) {
                                 $.getJSON('/data/beijingBoundary.json', function (dt) {
                                     //map[0].drawBoundary(dt);
                                     bdData = dt;
                                     $.ajax({
-                                        /* url:'http://192.168.1.42:3033/api/basicGraph?spaceType=grid&timeType=duration&netType=basic&other=none&beginTime=2016-07-05+03%3A30%3A00&endTime=2016-07-05+06%3A05%3A00',*/
+                                        /* url:'http://192.168.0.118:3033/api/basicGraph?spaceType=grid&timeType=duration&netType=basic&other=none&beginTime=2016-07-05+03%3A30%3A00&endTime=2016-07-05+06%3A05%3A00',*/
                                         url: get_url,
                                         type: 'GET',
                                         contentType: "application/json",
@@ -1107,7 +1107,7 @@ const userpannel = new Vue({
                                     //map[0].drawBoundary(dt);
                                     bdData = dt;
                                     $.ajax({
-                                        /* url:'http://192.168.1.42:3033/api/basicGraph?spaceType=grid&timeType=duration&netType=basic&other=none&beginTime=2016-07-05+03%3A30%3A00&endTime=2016-07-05+06%3A05%3A00',*/
+                                        /* url:'http://192.168.0.118:3033/api/basicGraph?spaceType=grid&timeType=duration&netType=basic&other=none&beginTime=2016-07-05+03%3A30%3A00&endTime=2016-07-05+06%3A05%3A00',*/
                                         url: get_url,
                                         type: 'GET',
                                         contentType: "application/json",
@@ -1128,7 +1128,7 @@ const userpannel = new Vue({
                         }
                         test(data);
                         /*$.ajax({
-                            /!* url:'http://192.168.1.42:3033/api/basicGraph?spaceType=grid&timeType=duration&netType=basic&other=none&beginTime=2016-07-05+03%3A30%3A00&endTime=2016-07-05+06%3A05%3A00',*!/
+                            /!* url:'http://192.168.0.118:3033/api/basicGraph?spaceType=grid&timeType=duration&netType=basic&other=none&beginTime=2016-07-05+03%3A30%3A00&endTime=2016-07-05+06%3A05%3A00',*!/
                             url:get_url,
                             type:'GET',
                             contentType:"application/json",
@@ -1176,14 +1176,14 @@ const userpannel = new Vue({
                             var begintime = starttime.split('-')[0] + "-" + start_month + "-" + starttime.split('-')[2] + "+" + start_hour;
                             //var end_month = months[end_time.split('-')[1]];
                             var endtime = end_time.split('-')[0] + "-" + start_month + "-" + end_time.split('-')[2] + "+" + end_hour;
-                            var get_url = "http://192.168.1.42:3033/api/basicGraph?spaceType=div&timeType=duration&netType=basic&other=none&beginTime=" + begintime + "&endTime=" + endtime +"&v=v2";
+                            var get_url = "http://192.168.0.118:3033/api/basicGraph?spaceType=div&timeType=duration&netType=basic&other=none&beginTime=" + begintime + "&endTime=" + endtime +"&v=v2";
                             console.log(get_url);
                             if (graph.nodes[0]) {
                                 $.getJSON('/data/beijingBoundary.json', function (dt) {
                                     //map[0].drawBoundary(dt);
                                     bdData = dt;
                                     $.ajax({
-                                        /!* url:'http://192.168.1.42:3033/api/basicGraph?spaceType=grid&timeType=duration&netType=basic&other=none&beginTime=2016-07-05+03%3A30%3A00&endTime=2016-07-05+06%3A05%3A00',*!/
+                                        /!* url:'http://192.168.0.118:3033/api/basicGraph?spaceType=grid&timeType=duration&netType=basic&other=none&beginTime=2016-07-05+03%3A30%3A00&endTime=2016-07-05+06%3A05%3A00',*!/
                                         url: get_url,
                                         type: 'GET',
                                         contentType: "application/json",
@@ -1202,7 +1202,7 @@ const userpannel = new Vue({
                                     });
                                 });
                                 /!* $.ajax({
-                                     /!* url:'http://192.168.1.42:3033/api/basicGraph?spaceType=grid&timeType=duration&netType=basic&other=none&beginTime=2016-07-05+03%3A30%3A00&endTime=2016-07-05+06%3A05%3A00',*!/
+                                     /!* url:'http://192.168.0.118:3033/api/basicGraph?spaceType=grid&timeType=duration&netType=basic&other=none&beginTime=2016-07-05+03%3A30%3A00&endTime=2016-07-05+06%3A05%3A00',*!/
                                      url:get_url,
                                      type:'GET',
                                      contentType:"application/json",
@@ -1388,14 +1388,14 @@ const userpannel = new Vue({
             var begintime = starttime.split('-')[0] + "-" + start_month + "-" + starttime.split('-')[2] + "+" + start_hour;
             //var end_month = months[end_time.split('-')[1]];
             var endtime = end_time.split('-')[0] + "-" + start_month + "-" + end_time.split('-')[2] + "+" + end_hour;
-            var get_url = "http://192.168.1.42:3033/api/basicGraph?spaceType=div&timeType=duration&netType=basic&other=none&beginTime=" + begintime + "&endTime=" + endtime+"&v=v2";
+            var get_url = "http://192.168.0.118:3033/api/basicGraph?spaceType=div&timeType=duration&netType=basic&other=none&beginTime=" + begintime + "&endTime=" + endtime+"&v=v2";
             console.log(get_url)
             var bdData;
             $.getJSON('/data/beijingBoundary.json', function (d) {
                 //map[0].drawBoundary(dt);
                 bdData = d;
                 $.ajax({
-                    /* url:'http://192.168.1.42:3033/api/basicGraph?spaceType=grid&timeType=duration&netType=basic&other=none&beginTime=2016-07-05+03%3A30%3A00&endTime=2016-07-05+06%3A05%3A00',*/
+                    /* url:'http://192.168.0.118:3033/api/basicGraph?spaceType=grid&timeType=duration&netType=basic&other=none&beginTime=2016-07-05+03%3A30%3A00&endTime=2016-07-05+06%3A05%3A00',*/
                     url: get_url,
                     type: 'GET',
                     contentType: "application/json",

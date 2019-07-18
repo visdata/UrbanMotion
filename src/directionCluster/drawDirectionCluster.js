@@ -16,7 +16,7 @@ class DirectionClusterView{
         var arcData = [];
         var timesegid = maps.timeSegId + maps.daySelect * 24;
         var eps = maps.eps;
-        var url = "http://192.168.1.42:3033/api/angleClusterStats?timeSegID=" + timesegid;
+        var url = "http://192.168.0.118:3033/api/angleClusterStats?timeSegID=" + timesegid;
         $.ajax({
             url: url,
             type: 'GET',
@@ -220,7 +220,7 @@ class DirectionClusterView{
         var arcData = [];
         var timesegid = maps.timeSegId + maps.daySelect * 24;
         var eps = maps.eps;
-        var url = "http://192.168.1.42:3033/api/angleClusterStats?timeSegID=" + timesegid;
+        var url = "http://192.168.0.118:3033/api/angleClusterStats?timeSegID=" + timesegid;
         console.log(url)
         /*$.ajax({
             url:url,

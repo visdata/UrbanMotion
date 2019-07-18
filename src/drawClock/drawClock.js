@@ -190,7 +190,7 @@ class clockView{
                                 else{
                                     seedUnit =seedUnit.toLowerCase()
                                 }
-                                var url ="http://192.168.1.42:3033/api/treeMap?treeNumRate="+seedNum+"&searchAngle="+angle+"&seedStrength="+seedStrength+"&treeWidth="+treeWidth+"&spaceInterval="+spaceInterval+"&seedUnit="+seedUnit+"&jumpLen="+jumpLen+"&gridDirNum="+gridDirNum+"&timeSegID="+timeSegId+"&delta="+delta+"&maxDistance="+maxDistance+"&gridSize="+gridSize+"&city="+city;
+                                var url ="http://192.168.0.118:3033/api/treeMap?treeNumRate="+seedNum+"&searchAngle="+angle+"&seedStrength="+seedStrength+"&treeWidth="+treeWidth+"&spaceInterval="+spaceInterval+"&seedUnit="+seedUnit+"&jumpLen="+jumpLen+"&gridDirNum="+gridDirNum+"&timeSegID="+timeSegId+"&delta="+delta+"&maxDistance="+maxDistance+"&gridSize="+gridSize+"&city="+city;
                                 console.log(url) ;
                                 map.allLatLngNodes = [];
                                 map.lastLen = 0;
@@ -329,7 +329,7 @@ class clockView{
                                                 maps.anomalyType = "N/A";
                                                 return;
                                             }
-                                            var url = "http://192.168.1.42:3033/api/abnormalStats?hourID="+hourID+"&timeSegID="+timeSegID+"&type="+type;
+                                            var url = "http://192.168.0.118:3033/api/abnormalStats?hourID="+hourID+"&timeSegID="+timeSegID+"&type="+type;
                                             console.log(url)
                                             $.ajax({
                                                 url:url,
@@ -552,7 +552,7 @@ class clockView{
         else {
             seedUnit =seedUnit.toLowerCase()
         }
-        var url ="http://192.168.1.42:3033/api/treeMap?treeNumRate="+seedNum+"&searchAngle="+angle+"&seedStrength="+seedStrength+"&treeWidth="+treeWidth+"&spaceInterval="+spaceInterval+"&seedUnit="+seedUnit+"&jumpLen="+jumpLen+"&gridDirNum="+gridDirNum+"&timeSegID="+timSegID+"&delta="+delta+"&city="+city+"&maxDistance="+maxDistance+"&gridSize="+gridSize;
+        var url ="http://192.168.0.118:3033/api/treeMap?treeNumRate="+seedNum+"&searchAngle="+angle+"&seedStrength="+seedStrength+"&treeWidth="+treeWidth+"&spaceInterval="+spaceInterval+"&seedUnit="+seedUnit+"&jumpLen="+jumpLen+"&gridDirNum="+gridDirNum+"&timeSegID="+timSegID+"&delta="+delta+"&city="+city+"&maxDistance="+maxDistance+"&gridSize="+gridSize;
         console.log(url) ;
         map.allLatLngNodes = [];
         map.lastLen = 0;
@@ -679,7 +679,7 @@ class clockView{
                         maps.anomalyType = "N/A";
                         return;
                     }
-                    var url = "http://192.168.1.42:3033/api/abnormalStats?hourID="+hourID+"&timeSegID="+timeSegID+"&type="+type;
+                    var url = "http://192.168.0.118:3033/api/abnormalStats?hourID="+hourID+"&timeSegID="+timeSegID+"&type="+type;
                     console.log(url)
                     $.ajax({
                         url:url,
@@ -748,17 +748,17 @@ class clockView{
             var begintime = starttime.split('-')[0] + "-" + start_month + "-" + starttime.split('-')[2] + "+" + start_hour;
             //var end_month = months[end_time.split('-')[1]];
             var endtime = end_time.split('-')[0] + "-" + start_month + "-" + end_time.split('-')[2] + "+" + end_hour;
-            var get_url = "http://192.168.1.42:3033/api/basicGraph?spaceType=div&timeType=duration&netType=basic&other=none&beginTime=" + begintime + "&endTime=" + endtime+"&v=v2";
-            var poi_to_div_url = "http://192.168.1.42:3033/api/basicGraph?spaceType=poi_to_div&timeType=duration&netType=basic&other=none&beginTime=" + begintime + "&endTime=" + endtime +"&v=v2";
+            var get_url = "http://192.168.0.118:3033/api/basicGraph?spaceType=div&timeType=duration&netType=basic&other=none&beginTime=" + begintime + "&endTime=" + endtime+"&v=v2";
+            var poi_to_div_url = "http://192.168.0.118:3033/api/basicGraph?spaceType=poi_to_div&timeType=duration&netType=basic&other=none&beginTime=" + begintime + "&endTime=" + endtime +"&v=v2";
             console.log(poi_to_div_url)
-            var div_to_poi_url = "http://192.168.1.42:3033/api/basicGraph?spaceType=div_to_poi&timeType=duration&netType=basic&other=none&beginTime=" + begintime + "&endTime=" + endtime +"&v=v2";
+            var div_to_poi_url = "http://192.168.0.118:3033/api/basicGraph?spaceType=div_to_poi&timeType=duration&netType=basic&other=none&beginTime=" + begintime + "&endTime=" + endtime +"&v=v2";
             console.log(get_url);
             if (currentIndex == 0) {
                 $.getJSON('/data/beijingBoundary.json', function (dt) {
                     //map[0].drawBoundary(dt);
                     bdData = dt;
                     $.ajax({
-                        /!* url:'http://192.168.1.42:3033/api/basicGraph?spaceType=grid&timeType=duration&netType=basic&other=none&beginTime=2016-07-05+03%3A30%3A00&endTime=2016-07-05+06%3A05%3A00',*!/
+                        /!* url:'http://192.168.0.118:3033/api/basicGraph?spaceType=grid&timeType=duration&netType=basic&other=none&beginTime=2016-07-05+03%3A30%3A00&endTime=2016-07-05+06%3A05%3A00',*!/
                         url: get_url,
                         type: 'GET',
                         contentType: "application/json",
@@ -818,7 +818,7 @@ class clockView{
                     //map[0].drawBoundary(dt);
                     bdData = dt;
                     $.ajax({
-                        /!* url:'http://192.168.1.42:3033/api/basicGraph?spaceType=grid&timeType=duration&netType=basic&other=none&beginTime=2016-07-05+03%3A30%3A00&endTime=2016-07-05+06%3A05%3A00',*!/
+                        /!* url:'http://192.168.0.118:3033/api/basicGraph?spaceType=grid&timeType=duration&netType=basic&other=none&beginTime=2016-07-05+03%3A30%3A00&endTime=2016-07-05+06%3A05%3A00',*!/
                         url: get_url,
                         type: 'GET',
                         contentType: "application/json",
