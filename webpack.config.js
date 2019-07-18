@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
 var path = require('path');
-var publicPath = 'http://localhost:3009/dist/';
+var publicPath = 'http://192.168.0.118:3009/dist/';
 //var publicPath = 'http://192.168.0.118:3009/dist/';
 var hotMiddlewareScript = 'webpack-hot-middleware/client?reload=true';
 
