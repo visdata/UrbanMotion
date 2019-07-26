@@ -27,7 +27,7 @@ function getData(curHourId) {
         seedUnit ="grid"
     }
     var url ="http://192.168.0.118:3033/api/treeMap?treeNumRate="+seedNum+"&searchAngle="+angle+"&seedStrength="+seedStrength+"&treeWidth="+treeWidth+"&spaceInterval="+spaceInterval+"&seedUnit="+seedUnit+"&jumpLen="+jumpLen+"&gridDirNum="+gridDirNum+"&timeSegID="+timeSegId;
-    if (maps.mapMatching != 0){
+    if (maps.mapMatching == "open"){
         url ="http://192.168.0.118:3033/api/treeMapMM?treeNumRate="+seedNum+"&searchAngle="+angle+"&seedStrength="+seedStrength+"&treeWidth="+treeWidth+"&spaceInterval="+spaceInterval+"&seedUnit="+seedUnit+"&jumpLen="+jumpLen+"&gridDirNum="+gridDirNum+"&timeSegID="+timeSegId;
     }
     console.log(url) ;
@@ -118,7 +118,7 @@ function getDataAm(aniCurDay) {
         seedUnit ="grid"
     }
     var url ="http://192.168.0.118:3033/api/treeMap?treeNumRate="+seedNum+"&searchAngle="+angle+"&seedStrength="+seedStrength+"&treeWidth="+treeWidth+"&spaceInterval="+spaceInterval+"&seedUnit="+seedUnit+"&jumpLen="+jumpLen+"&gridDirNum="+gridDirNum+"&timeSegID="+timeSegId;
-    if (maps.mapMatching != 0){
+    if (maps.mapMatching == "open"){
         url ="http://192.168.0.118:3033/api/treeMapMM?treeNumRate="+seedNum+"&searchAngle="+angle+"&seedStrength="+seedStrength+"&treeWidth="+treeWidth+"&spaceInterval="+spaceInterval+"&seedUnit="+seedUnit+"&jumpLen="+jumpLen+"&gridDirNum="+gridDirNum+"&timeSegID="+timeSegId;
     }
     console.log(url) ;
@@ -230,7 +230,7 @@ function getTreeMap() {
         seedUnit ="grid"
     }
     var url ="http://192.168.0.118:3033/api/treeMap?treeNumRate="+seedNum+"&searchAngle="+angle+"&seedStrength="+seedStrength+"&treeWidth="+treeWidth+"&spaceInterval="+spaceInterval+"&seedUnit="+seedUnit+"&jumpLen="+jumpLen+"&gridDirNum="+gridDirNum+"&timeSegID="+timeSegId+"&delta="+delta+"&speedToShow="+speedToShow+"&maxDistance="+maxDistance+"&city="+city;
-    if (maps.mapMatching != 0){
+    if (maps.mapMatching == "open"){
         url ="http://192.168.0.118:3033/api/treeMapMM?treeNumRate="+seedNum+"&searchAngle="+angle+"&seedStrength="+seedStrength+"&treeWidth="+treeWidth+"&spaceInterval="+spaceInterval+"&seedUnit="+seedUnit+"&jumpLen="+jumpLen+"&gridDirNum="+gridDirNum+"&timeSegID="+timeSegId+"&delta="+delta+"&speedToShow="+speedToShow+"&maxDistance="+maxDistance+"&city="+city;
     }
     console.log(url) ;

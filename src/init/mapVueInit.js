@@ -209,10 +209,10 @@ var maps = {
         },*/
         {index:5,
             name:"Map-matching:",
-            init:0,
+            init:'close',
             option:[
-                {value:0,label:'close'},
-                {value:1,label:'open'}
+                {value:'close',label:'close'},
+                {value:'open',label:'open'}
             ]
         },
         {index:6,

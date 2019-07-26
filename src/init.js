@@ -448,7 +448,7 @@ const userpannel = new Vue({
             }
 
             var url ="http://192.168.0.118:3033/api/treeMap?treeNumRate="+seedNum+"&searchAngle="+angle+"&seedStrength="+seedStrength+"&treeWidth="+treeWidth+"&spaceInterval="+spaceInterval+"&seedUnit="+seedUnit+"&jumpLen="+jumpLen+"&gridDirNum="+gridDirNum+"&timeSegID="+timeSegId+"&delta="+delta+"&maxDistance="+maxDistance+"&gridSize="+gridSize+"&city="+city;
-            if (maps.mapMatching != 0){
+            if (maps.mapMatching == "open"){
                 url ="http://192.168.0.118:3033/api/treeMapMM?treeNumRate="+seedNum+"&searchAngle="+angle+"&seedStrength="+seedStrength+"&treeWidth="+treeWidth+"&spaceInterval="+spaceInterval+"&seedUnit="+seedUnit+"&jumpLen="+jumpLen+"&gridDirNum="+gridDirNum+"&timeSegID="+timeSegId+"&delta="+delta+"&maxDistance="+maxDistance+"&gridSize="+gridSize+"&city="+city;
             }
 
