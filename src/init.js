@@ -401,7 +401,7 @@ const userpannel = new Vue({
             var maxDistance = maps.newOptionData[10].init
             var gridSize = maps.newOptionData[11].init
             var city = maps.city
-            maps.mapMatching = maps.newOptionData[5].init
+            maps.mapMatching = maps.newOptionData[12].init
 
             console.log(maps.timeSegId)
             console.log(maps.daySelect)

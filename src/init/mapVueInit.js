@@ -207,14 +207,6 @@ var maps = {
                 {value:100,label:100}
             ]
         },*/
-        {index:5,
-            name:"Map-matching:",
-            init:'close',
-            option:[
-                {value:'close',label:'close'},
-                {value:'open',label:'open'}
-            ]
-        },
         {index:6,
             name:"MinFlowSpeed:",
             init:0,
@@ -295,6 +287,14 @@ var maps = {
                 {value:500,label:500},
                 {value:250,label:250},
                 {value:100,label:100}
+            ],
+        },
+        {index:5,
+            name:"Map-matching:",
+            init:'close',
+            option:[
+                {value:'close',label:'close'},
+                {value:'open',label:'open'}
             ]
         }
         // {

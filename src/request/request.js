@@ -12,7 +12,7 @@ function getData(curHourId) {
     var seedNum = maps.seedNum/100;
     var angle = maps.newOptionData[1].init;
     var seedStrength = maps.newOptionData[2].init;
-    var treeWidth = maps.newOptionData[12].init;
+    var treeWidth = 1;
     var direction = maps.fromOrTo;
     var spaceInterval = 200;
     var jumpLen = maps.newOptionData[0].init;
@@ -103,7 +103,7 @@ function getDataAm(aniCurDay) {
     var seedNum = maps.seedNum/100;
     var angle = maps.newOptionData[1].init;
     var seedStrength = maps.newOptionData[2].init;
-    var treeWidth = maps.newOptionData[12].init;
+    var treeWidth = 1;
     var direction = maps.fromOrTo;
     var spaceInterval = 200;
     var jumpLen = maps.newOptionData[0].init;
