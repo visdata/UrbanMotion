@@ -190,7 +190,7 @@ class clockView{
                                 else{
                                     seedUnit =seedUnit.toLowerCase()
                                 }
-                                var url ="http://192.168.0.118:3033/api/treeMap?treeNumRate="+seedNum+"&searchAngle="+angle+"&seedStrength="+seedStrength+"&treeWidth="+treeWidth+"&spaceInterval="+spaceInterval+"&seedUnit="+seedUnit+"&jumpLen="+jumpLen+"&gridDirNum="+gridDirNum+"&timeSegID="+timeSegId+"&delta="+delta+"&maxDistance="+maxDistance+"&gridSize="+gridSize+"&city="+city;
+                                var url ="http://192.168.0.118:3033/api/treeMapMM?treeNumRate="+seedNum+"&searchAngle="+angle+"&seedStrength="+seedStrength+"&treeWidth="+treeWidth+"&spaceInterval="+spaceInterval+"&seedUnit="+seedUnit+"&jumpLen="+jumpLen+"&gridDirNum="+gridDirNum+"&timeSegID="+timeSegId+"&delta="+delta+"&maxDistance="+maxDistance+"&gridSize="+gridSize+"&city="+city;
                                 console.log(url) ;
                                 map.allLatLngNodes = [];
                                 map.lastLen = 0;
@@ -552,7 +552,7 @@ class clockView{
         else {
             seedUnit =seedUnit.toLowerCase()
         }
-        var url ="http://192.168.0.118:3033/api/treeMap?treeNumRate="+seedNum+"&searchAngle="+angle+"&seedStrength="+seedStrength+"&treeWidth="+treeWidth+"&spaceInterval="+spaceInterval+"&seedUnit="+seedUnit+"&jumpLen="+jumpLen+"&gridDirNum="+gridDirNum+"&timeSegID="+timSegID+"&delta="+delta+"&city="+city+"&maxDistance="+maxDistance+"&gridSize="+gridSize;
+        var url ="http://192.168.0.118:3033/api/treeMapMM?treeNumRate="+seedNum+"&searchAngle="+angle+"&seedStrength="+seedStrength+"&treeWidth="+treeWidth+"&spaceInterval="+spaceInterval+"&seedUnit="+seedUnit+"&jumpLen="+jumpLen+"&gridDirNum="+gridDirNum+"&timeSegID="+timSegID+"&delta="+delta+"&city="+city+"&maxDistance="+maxDistance+"&gridSize="+gridSize;
         console.log(url) ;
         map.allLatLngNodes = [];
         map.lastLen = 0;
