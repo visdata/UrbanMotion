@@ -207,6 +207,14 @@ var maps = {
                 {value:100,label:100}
             ]
         },*/
+        {index:5,
+            name:"Map-matching:",
+            init:0,
+            option:[
+                {value:0,label:'close'},
+                {value:1,label:'open'}
+            ]
+        },
         {index:6,
             name:"MinFlowSpeed:",
             init:0,
@@ -352,7 +360,8 @@ var maps = {
     'speedToShow':'all',
     'mapLayerType': 'default',
     'personalId':0,
-    'city':'BJ'
+    'city':'BJ',
+    'mapMatching': 0
 }
 
 export {maps}
