@@ -289,7 +289,7 @@ var maps = {
                 {value:100,label:100}
             ],
         },
-        {index:5,
+        {index:13,
             name:"Map-matching:",
             init:'close',
             option:[
