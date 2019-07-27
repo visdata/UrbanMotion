@@ -328,7 +328,7 @@ var maps = {
         init:"One",
         option:[
                 {value:3,label:"Mid"},
-                {value:5,label:"High"}
+                {value:5,label:"Hi"}
                 ]
 
     },

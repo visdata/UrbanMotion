@@ -190,7 +190,7 @@ function getTreeWidth() {
     if (maps.treeWidth.init == "Mid"){
         return 3
     }
-    if (maps.treeWidth.init == "High"){
+    if (maps.treeWidth.init == "Hi"){
         return 5
     }
 }
