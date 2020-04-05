@@ -1,15 +1,15 @@
-# UrbanMotion 文档
+# UrbanMotion 文档 UrbanMotion Doc
 
-## 安装
+## 安装 Installation
 ```
 git clone url
 npm install
 npm run start
 ```
-## 简介
+## 简介 Introduction
 主要使用vue\iview\jade\leaflet\canvas\heatmap.js等技术
 
-## 项目结构
+## 项目结构 Structure
 
 ```
 UrbanMotion/
@@ -81,7 +81,7 @@ UrbanMotion/
 └─views
 ```
 
-## src/重要文件详细说明
+## src/重要文件详细说明 Detailed Descriptions of src/ important files
 
 ### 1. init.js
 用途：入口文件，初始化vue实例对象，包含绑定数据、组件、methods、computed、mounted等生命周期
@@ -128,7 +128,7 @@ UrbanMotion/
 ### 12 /directionCluster文件夹
 用途：生成右上角的方向聚类时钟，并添加点击监听事件
 
-### 修改说明
+### 修改说明 Instructions of modification
 ```
 # 界面修改：../views文件夹
 # 绑定数据添加/修改：/init/mapVueInit.js中进行添加/修改
