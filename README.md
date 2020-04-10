@@ -1,6 +1,6 @@
 # UrbanMotion 前端文档 UrbanMotion Doc
 
-项目后端详见：1. https://github.com/visdata/UrbanMotionServer  2. https://github.com/visdata/UrbanMotionAnalysis
+More details on the system backend can be found in: 1. https://github.com/visdata/UrbanMotionServer  2. https://github.com/visdata/UrbanMotionAnalysis
 
 ## 安装 Installation
 ```
